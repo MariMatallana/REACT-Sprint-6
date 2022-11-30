@@ -5,5 +5,4 @@ export const Button = styled.button`
     height: 50px;
     font-size: 18px;
     background-color: lightgray;
-
 `
