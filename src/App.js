@@ -1,14 +1,21 @@
 
 import './App.css';
-import './Components/Escena/Escena.js'
-import { Escena } from './Components/Escena/Escena.js'
+import './Components/Escena.js'
+import { Escena } from './Components/Escena.js'
+import { Button } from "./Components/Button-style.js"
 
 function App() {
 
   return (
-
-  <Escena/>
-
+  <div className='App'>
+    <header>
+    <Button> Anterior </Button>
+    <Button> Siguiente </Button>
+    </header>
+    <body>
+    <Escena/>
+    </body>
+  </div>
   );
 }
 

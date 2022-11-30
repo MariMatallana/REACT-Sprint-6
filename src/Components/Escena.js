@@ -1,4 +1,3 @@
-import { Button } from "./Button-style"
 import { Container} from "./Container-style"
 export const Escena = () => {
 
@@ -17,10 +16,6 @@ function getscenes(e) {
 
   return (
     <>
-    <div>
-      <Button> Anterior </Button>
-      <Button> Siguiente </Button>
-    </div>
     <div>
       <Container>
         <p>{newscenes[0]}</p>
