@@ -16,27 +16,18 @@ function getscenes(e) {
 
   return (
     <>
-    <div>
       <Container>
-        <p>{newscenes[0]}</p>
+      <p>{newscenes[0]}</p>
       </Container>
-    </div>
-    <div>
       <Container>
       <p>{newscenes[1]}</p>
       </Container>
-    </div>
-    <div>
       <Container>
       <p>{newscenes[2]}</p>
       </Container>
-    </div>
-    <div>
       <Container>
       <p>{newscenes[3]}</p>
       </Container>
-    </div>
-  
     </>
   );
 

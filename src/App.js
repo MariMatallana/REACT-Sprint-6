@@ -8,7 +8,6 @@ import { useState, useEffect } from 'react'
 
 function App() {
 
-
   const [count, setCount] = useState(0)
 
   useEffect(() => {
@@ -17,13 +16,9 @@ function App() {
 
   return (
   <div className='App'>
-    <header>
     <Button onClick={() => setCount(count -1)}> Anterior </Button>
     <Button onClick={() => setCount(count +1)}> Siguiente </Button>
-    </header>
-    <body>
-    <Escena/>
-    </body>
+    <Escena/> 
     <p>{count}</p>
   </div>
   );
