@@ -1,7 +1,6 @@
-
-export const Escena = ( props ) => {
-
-console.log (props)
+import { Button } from "./Button-style"
+import { Container} from "./Container-style"
+export const Escena = () => {
 
 const scenes = [
   "Nuestro héroe estaba flotando por el espacio sideral cuando a lo lejos divisó una nave espacial",
@@ -16,15 +15,33 @@ function getscenes(e) {
   return e
 }
 
-
   return (
     <>
-      <h1>{props.title}</h1>
-      <p> {newscenes[0]} </p>
-      <p> {newscenes[1]} </p>
-      <p> {newscenes[2]} </p>
-      <p> {newscenes[3]} </p>
-    
+    <div>
+      <Button> Anterior </Button>
+      <Button> Siguiente </Button>
+    </div>
+    <div>
+      <Container>
+        <p>{newscenes[0]}</p>
+      </Container>
+    </div>
+    <div>
+      <Container>
+      <p>{newscenes[1]}</p>
+      </Container>
+    </div>
+    <div>
+      <Container>
+      <p>{newscenes[2]}</p>
+      </Container>
+    </div>
+    <div>
+      <Container>
+      <p>{newscenes[3]}</p>
+      </Container>
+    </div>
+  
     </>
   );
 
