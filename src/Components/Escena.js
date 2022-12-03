@@ -1,36 +1,52 @@
-import { Container} from "./Container-style"
-export const Escena = () => {
+import { Container, ContainerPink } from "./Container-style"
+import { useState, useEffect } from 'react'
+import { Button } from "./Button-style"
 
-const scenes = [
-  "Nuestro héroe estaba flotando por el espacio sideral cuando a lo lejos divisó una nave espacial",
-  "Sentía curiosidad por el interior de la nave y se puso a inspeccionarla. Llegó a una sala con dos puertas.",
-  "El héroe decidió atravesar la puerta que le llevaba a casa",
-  "Mientras tanto, otros héroes no tuvieron tanta suerte en su elección..."
-]
 
-let newscenes = scenes.map(getscenes)
+function Escena(props) {
 
-function getscenes(e) {
-  return e
-}
+  let newscenes = props.texto
+  let numTotal = props.numeroTotal - 1
+
+
+  const [count, setCount] = useState(0)
+
+
+  const sumar = () => {
+    if (count >= 0) {
+      setCount(count + 1)
+    }
+    if (count == numTotal) {
+      setCount(count + 0)
+    }
+
+  }
+
+  const restar = () => {
+    if (count > 0) {
+      setCount(count - 1)
+    }
+  }
+
 
   return (
     <>
-      <Container>
-      <p>{newscenes[0]}</p>
-      </Container>
-      <Container>
-      <p>{newscenes[1]}</p>
-      </Container>
-      <Container>
-      <p>{newscenes[2]}</p>
-      </Container>
-      <Container>
-      <p>{newscenes[3]}</p>
-      </Container>
+
+      <Button onClick={() => restar(newscenes, numTotal)}> Anterior </Button>
+      <Button onClick={() => sumar(props.texto, numTotal)}> Siguiente </Button>
+      <div>
+        <h5>{newscenes.map((x) => (
+          <div key={String(x)}>
+            <Container>{x}</Container>
+          </div>))}
+        </h5>
+      </div>
+
+      <p>{count}</p>
     </>
   );
 
-  
+
 }
+export default Escena;
 

@@ -1,25 +1,22 @@
 import React from 'react';
 import './App.css';
 import './Components/Escena.js'
-import { Escena } from './Components/Escena.js'
-import { Button } from "./Components/Button-style.js"
+import Escena  from './Components/Escena.js'
 import { useState, useEffect } from 'react'
 
 
 function App() {
 
-  const [count, setCount] = useState(0)
-
-  useEffect(() => {
-    
-  })
+  const scenes = [
+    "Nuestro héroe estaba flotando por el espacio sideral cuando a lo lejos divisó una nave espacial",
+    "Sentía curiosidad por el interior de la nave y se puso a inspeccionarla. Llegó a una sala con dos puertas.",
+    "El héroe decidió atravesar la puerta que le llevaba a casa",
+    "Mientras tanto, otros héroes no tuvieron tanta suerte en su elección..."
+  ]
 
   return (
   <div className='App'>
-    <Button onClick={() => setCount(count -1)}> Anterior </Button>
-    <Button onClick={() => setCount(count +1)}> Siguiente </Button>
-    <Escena/> 
-    <p>{count}</p>
+    <Escena texto={scenes} numeroTotal={scenes.length}/>
   </div>
   );
 }

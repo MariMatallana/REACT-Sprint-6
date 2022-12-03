@@ -4,8 +4,8 @@ export const Container = styled.div`
     justify-content: center;
     margin:0 auto;
     width: 90%;
-    min-height: 20px;
-    line-height: 20px;
+    min-height: 40px;
+    line-height: 40px;
     text-align:center;
     background-color: white;
     margin-top: 15px;
@@ -25,7 +25,7 @@ export const Container = styled.div`
     min-height: 40px;
     line-height: 40px;
     text-align:center;
-    background-color: white;
+    background-color: pink;
     margin-top: 15px;
     margin-bottom: 15px;
     border-style: solid;
