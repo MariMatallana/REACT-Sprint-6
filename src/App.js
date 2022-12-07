@@ -2,10 +2,17 @@ import React from 'react';
 import './App.css';
 import './Components/Escena.js'
 import Escena  from './Components/Escena.js'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import { Container } from "./Components/Container-style"
 
 
 function App() {
+
+  const [page, setPage] = useState(true)
+
+  // const start = () => {
+  //   setPage(false)
+  // }
 
   const scenes = [
     "Nuestro héroe estaba flotando por el espacio sideral cuando a lo lejos divisó una nave espacial",
@@ -16,7 +23,15 @@ function App() {
 
   return (
   <div className='App'>
-    <Escena texto={scenes} numeroTotal={scenes.length}/>
+
+    {
+      page 
+      ? <Container> ¡Bienvenido! A través de este tutorial descubrirás algunos consejos que puedes poner en práctica en el trabajo. Los consejos tienen una secuencia que debes seguir para que sean de mejor ayuda.</Container>
+     
+      :<Escena texto={scenes} numeroTotal={scenes.length}></Escena>
+
+    }
+    <button onClick={() => setPage(!page)} disabled={!page}>Empezar</button>
   </div>
   );
 }

@@ -1,5 +1,5 @@
 import { Container } from "./Container-style"
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Button } from "./Button-style"
 
 
