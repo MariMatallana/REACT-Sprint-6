@@ -4,10 +4,10 @@ import './Components/Escena.js'
 import Escena  from './Components/Escena.js'
 import { useState } from 'react'
 import { Container } from "./Components/Container-style"
-import uno from '../src/img/uno.jpg'
-import dos from '../src/img/dos.jpg'
-import tres from '../src/img/tres.jpg'
-import cuatro from '../src/img/cuatro.jpg'
+import uno from './img/uno.jpg'
+import dos from './img/dos.jpg'
+import tres from './img/tres.jpg'
+import cuatro from './img/cuatro.jpg'
 
 function App() {
 
@@ -29,17 +29,21 @@ function App() {
   ]
 
   return (
+
   <div className='App'> 
+  
 
     {
       page 
-      ? <Container> ¡Bienvenido! A través de este tutorial descubrirás algunos consejos que puedes poner en práctica en el trabajo. Los consejos tienen una secuencia que debes seguir para que sean de gran ayuda.</Container>
-     
+      ? 
+      <Container> ¡Bienvenido! A través de este tutorial descubrirás algunos consejos que puedes poner en práctica en el trabajo. Los consejos tienen una secuencia que debes seguir para que sean de gran ayuda.</Container>
       :<Escena texto={scenes} numeroTotal={scenes.length}></Escena>
-
     }
     <button onClick={() => setPage(!page)} hidden={!page}>Empezar</button>
+
+    
   </div>
+  
   );
 }
 

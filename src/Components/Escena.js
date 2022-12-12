@@ -2,10 +2,7 @@ import { Container } from "./Container-style"
 import { useState } from 'react'
 import { Button } from "./Button-style"
 import BackgroundPicture from "./BackgroundPicture"
-import uno from '../img/uno.jpg'
-import dos from '../img/dos.jpg'
-import tres from '../img/tres.jpg'
-import cuatro from '../img/cuatro.jpg'
+
 
 function Escena(props) {
 
@@ -33,21 +30,22 @@ function Escena(props) {
   }
 
   return (
-    // <BackgroundPicture images={newscenes} counter={count}>
-      <div>
-        <Button onClick={() => restar(newscenes, numTotal)}> Anterior </Button>
-        <Button onClick={() => sumar(newscenes, numTotal)}> Siguiente </Button>
-        <div>
-          <h5>
-            {newscenes.map((x, index) => (
-              <div key={String(x)}>
-                <Container color={index == count ? "pink" : "white"} > {x.txt}</Container>
-              </div>))}
-          </h5>
-        </div>
-        </div>
-    // </BackgroundPicture>
-    
+    <div>
+      <BackgroundPicture images={newscenes} counter={count}></BackgroundPicture>
+      <div style={{position: 'fixed', width: '100%'}}>
+      <Button onClick={() => restar(newscenes, numTotal)}> Anterior </Button>
+      <Button onClick={() => sumar(newscenes, numTotal)}> Siguiente </Button>
+      <h5>
+        {newscenes.map((x, index) => (
+          <div key={String(x)}>
+            <Container color={index == count ? "pink" : "white"} opacity={index == count ? "1" : "0.8"}> {x.txt} </Container>
+          </div>))}
+      </h5>
+      </div>
+    </div>
+       
+
+
   );
 }
 export default Escena;

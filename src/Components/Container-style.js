@@ -6,9 +6,11 @@ export const Container = styled.div`
   width: 90%;
   min-height: 40px;
   line-height: 40px;
+  font-size: 15px;
   text-align:center;
   background-color: ${props => props.color}; 
-  margin-top: 15px;
+  opacity: ${props => props.opacity};
+  margin-top: 25px;
   margin-bottom: 15px;
   border-style: solid;
   border-color: black;
