@@ -4,34 +4,41 @@ import './Components/Escena.js'
 import Escena  from './Components/Escena.js'
 import { useState } from 'react'
 import { Container } from "./Components/Container-style"
-
+import uno from '../src/img/uno.jpg'
+import dos from '../src/img/dos.jpg'
+import tres from '../src/img/tres.jpg'
+import cuatro from '../src/img/cuatro.jpg'
 
 function App() {
 
   const [page, setPage] = useState(true)
 
-  // const start = () => {
-  //   setPage(false)
-  // }
-
   const scenes = [
-    "Nuestro héroe estaba flotando por el espacio sideral cuando a lo lejos divisó una nave espacial",
-    "Sentía curiosidad por el interior de la nave y se puso a inspeccionarla. Llegó a una sala con dos puertas.",
-    "El héroe decidió atravesar la puerta que le llevaba a casa",
-    "Mientras tanto, otros héroes no tuvieron tanta suerte en su elección..."
+   { "txt" : "Nuestro héroe estaba flotando por el espacio sideral cuando a lo lejos divisó una nave espacial",
+      "img" : uno
+    },
+    { "txt" : "Sentía curiosidad por el interior de la nave y se puso a inspeccionarla. Llegó a una sala con dos puertas.",
+    "img" : dos
+    },
+    { "txt" : "El héroe decidió atravesar la puerta que le llevaba a casa",
+    "img" : tres
+    },
+    { "txt" : "Mientras tanto, otros héroes no tuvieron tanta suerte en su elección...",
+    "img" : cuatro
+    },
   ]
 
   return (
-  <div className='App'>
+  <div className='App'> 
 
     {
       page 
-      ? <Container> ¡Bienvenido! A través de este tutorial descubrirás algunos consejos que puedes poner en práctica en el trabajo. Los consejos tienen una secuencia que debes seguir para que sean de mejor ayuda.</Container>
+      ? <Container> ¡Bienvenido! A través de este tutorial descubrirás algunos consejos que puedes poner en práctica en el trabajo. Los consejos tienen una secuencia que debes seguir para que sean de gran ayuda.</Container>
      
       :<Escena texto={scenes} numeroTotal={scenes.length}></Escena>
 
     }
-    <button onClick={() => setPage(!page)} disabled={!page}>Empezar</button>
+    <button onClick={() => setPage(!page)} hidden={!page}>Empezar</button>
   </div>
   );
 }
