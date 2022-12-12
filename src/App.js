@@ -36,10 +36,10 @@ function App() {
     {
       page 
       ? 
-      <Container> ¡Bienvenido! A través de este tutorial descubrirás algunos consejos que puedes poner en práctica en el trabajo. Los consejos tienen una secuencia que debes seguir para que sean de gran ayuda.</Container>
+      <Container style={{background: '#FDEBD0', color: '#F87053', fontSize: '30px', padding: '20px', border: "white" }}> ¡Bienvenido! Estas a punto de leer un fragmento de un cuento para niños. Esta es una prueba piloto que nos ha pedido un cliente con el objetivo de poder mostrar dos botones para poder avanzar y retroceder en el mensaje, modificándose el texto de ayuda y la imagen de fondo</Container>
       :<Escena texto={scenes} numeroTotal={scenes.length}></Escena>
     }
-    <button onClick={() => setPage(!page)} hidden={!page}>Empezar</button>
+    <button onClick={() => setPage(!page)} hidden={!page} style={{fontSize: '25px', color: 'white', background: '#F87053', border: "white", padding: '10px', cursor: 'pointer', marginTop: '15px'}}>Empezar</button>
 
     
   </div>

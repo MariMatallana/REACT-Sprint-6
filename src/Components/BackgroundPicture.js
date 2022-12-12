@@ -13,7 +13,7 @@ function BackgroundPicture(props) {
         position: 'fixed',
         width: '100%',
     };
-
+ 
     return (
 
         <div style={myStyle}> </div>

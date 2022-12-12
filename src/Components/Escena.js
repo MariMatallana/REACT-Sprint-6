@@ -28,7 +28,7 @@ function Escena(props) {
       alert("Estas en el inicio")
     }
   }
-
+ 
   return (
     <div>
       <BackgroundPicture images={newscenes} counter={count}></BackgroundPicture>

@@ -6,7 +6,7 @@ export const Container = styled.div`
   width: 90%;
   min-height: 40px;
   line-height: 40px;
-  font-size: 15px;
+  font-size: 20px;
   text-align:center;
   background-color: ${props => props.color}; 
   opacity: ${props => props.opacity};
